@@ -173,12 +173,12 @@ function getModelViewMatrix() {
     let rotationMatrix_Y = createRotationMatrix_Y(Math.PI / 4);
     let rotationMatrix_Z = createRotationMatrix_Z(Math.PI / 3);
 
-    // let tempMatrix = multiplyMatrices(identityMatrix, translationMatrix);
     let tempMatrix = multiplyMatrices(identityMatrix, rotationMatrix_X);
     tempMatrix = multiplyMatrices(tempMatrix, rotationMatrix_Y);
     tempMatrix = multiplyMatrices(tempMatrix, rotationMatrix_Z);
     tempMatrix = multiplyMatrices(tempMatrix, scaleMatrix);
     return multiplyMatrices(tempMatrix, translationMatrix);
+
 }
 
 /**
